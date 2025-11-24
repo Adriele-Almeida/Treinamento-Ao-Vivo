@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Treinamento ao Vivo - Sites e Apps com IA 100% Gratuitos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Treinamento ao vivo: Como criar sites profissionais e aplicativos gratuitos usando Inteligência Artificial, sem saber programar." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Treinamento: Criação de Sites e Apps com IA" />
+  <meta property="og:description" content="Participe do treinamento ao vivo e aprenda a criar sites e apps com IA, sem precisar programar." />
+  <meta property="og:image" content="hero-suafoto.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pay.kiwify.com.br/jiuZlDG" />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #050b1f;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-strong: #0ea5e9;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --danger: #f97373;
+      --radius: 14px;
+      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.85);
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+
+    /* MATRIX EFFECT */
+    #matrix-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--text);
+      position: relative;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    nav {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+        gap: 16px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+      }
+      nav a:hover { color: var(--accent); }
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 52%);
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.85);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+      padding: 24px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(15, 23, 42, 1), var(--bg) 55%);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-main h1 {
+      font-size: 34px;
+      margin: 12px 0 8px;
+      line-height: 1.2;
+    }
+
+    .hero-highlight {
+      color: var(--accent-strong);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-list {
+      padding-left: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-list li {
+      margin-bottom: 8px;
+    }
+
+    .price-box {
+      margin: 16px 0;
+    }
+
+    .price-main {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .price-installments {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-secondary {
+      background: rgba(5, 11, 31, 0.5);
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-text {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-image-frame {
+      margin-top: 12px;
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      border-radius: 10px;
+      background: var(--bg-alt);
+      min-height: 200px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent-strong), #22d3ee);
+      color: #0b1120;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4);
+    }
+
+    section {
+      margin-bottom: 40px;
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.25);
+      padding: 22px 18px;
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.96), var(--bg) 70%);
+    }
+
+    .section-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    section h2 {
+      font-size: 26px;
+      margin: 8px 0 16px;
+      line-height: 1.3;
+    }
+
+    section p {
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .two-cols {
+        grid-template-columns: 1fr;
+      }
+      .grid-3 {
+        grid-template-columns: 1fr !important;
+      }
+      .price-section {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .check-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 197, 94, 0.7);
+      background: rgba(34, 197, 94, 0.15);
+      color: #22c55e;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .image-box img {
+      width: 100%;
+      min-height: 160px;
+      border-radius: 10px;
+      background: var(--bg-alt);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.5);
+      padding: 14px;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), var(--bg) 90%);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 8px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 6px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      color: var(--accent);
+      background: rgba(8, 47, 73, 0.5);
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .price-section {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 20px;
+    }
+
+    .price-block {
+      background: rgba(5, 11, 31, 0.5);
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .price-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .price-big {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .price-small {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(30,64,175,0.8);
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<!-- MATRIX BACKGROUND EFFECT -->
+<canvas id="matrix-canvas"></canvas>
+
+<div class="page">
+
+<header>
+  <div class="logo">
+    <div class="logo-mark">A</div>
+    <div class="logo-text">
+      <span>Maestro do Novo Digital</span>
+      <span>Treinamento Ao Vivo</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-main">
+
+    <div class="pill">
+      <span class="pill-dot"></span>
+      AO VIVO · 29 de Novembro · <span class="pill-strong">14h (sábado)</span>
+    </div>
+
+    <h1>
+      Como criar <span class="hero-highlight">sites profissionais</span> e
+      <span class="hero-highlight">aplicativos incríveis</span> usando IA — 100% gratuito
+    </h1>
+
+    <p class="hero-subtitle">
+      Você não precisa ter nenhuma habilidade em marketing digital, nem experiência com Inteligência Artificial.
+      Vou te entregar um passo a passo claro de como criar uma fonte real de lucro — mesmo começando do zero.
+    </p>
+
+    <ul class="hero-list">
+      <li>Sites interativos</li>
+      <li>Aplicativos funcionais</li>
+      <li>Landing pages, geradores automáticos, sistemas internos e ferramentas para clientes</li>
+      <li>Tudo usando plataformas 100% gratuitas — sem assinatura, sem código</li>
+    </ul>
+
+    <div class="price-box">
+      <div class="price-main">R$ 149,00 no Pix</div>
+      <div class="price-installments">ou 12x de R$ 14,33</div>
+    </div>
+
+    <a href="https://pay.kiwify.com.br/jiuZlDG" class="btn-primary" target="_blank">
+      GARANTIR MINHA VAGA AGORA
+    </a>
+
+  </div>
+
+  <aside class="hero-secondary">
+    <div class="hero-tag">Visual do treinamento</div>
+    <div class="hero-card-title">Ambiente futurista focado em prática</div>
+    <p class="hero-card-text">
+      Aula 100% prática com criação em tempo real de sites e aplicativos.
+    </p>
+
+    <div class="hero-image-frame">
+      <img src="hero-suafoto.png" alt="Ambiente de treinamento">
+    </div>
+  </aside>
+</div>
+
+<!-- SEÇÃO 2 — A PROMESSA -->
+<section id="sobre">
+  <div class="two-cols">
+    <div>
+      <div class="section-tag">A promessa</div>
+      <h2>Você vai aprender exatamente o que ninguém tem coragem de mostrar</h2>
+      <p><strong>Como criar e vender ferramentas reais usando IA — sem gastar nada.</strong></p>
+
+      <ul class="check-list">
+        <li><span class="check-icon">✔</span> Criar sites profissionais de nível premium</li>
+        <li><span class="check-icon">✔</span> Construir aplicativos inteligentes com IA</li>
+        <li><span class="check-icon">✔</span> Vender seus projetos em plataformas como Kiwify</li>
+        <li><span class="check-icon">✔</span> Usar para seus próprios negócios</li>
+        <li><span class="check-icon">✔</span> Aprender tudo em poucas horas</li>
+      </ul>
+
+      <p>É direto ao ponto. É prático. É real.</p>
+    </div>
+
+    <div class="image-box">
+      <img src="sites-suafoto.png" alt="Exemplos de sites">
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section id="conteudo">
+  <div class="section-tag">Após a aula</div>
+  <h2>O que você será capaz de fazer</h2>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="badge"><span class="badge-dot"></span> Sites</div>
+      <div class="card-title">Criar sites profissionais</div>
+      <p>Animações, estrutura moderna e visual comercial.</p>
+    </div>
+
+    <div class="card">
+      <div class="badge"><span class="badge-dot"></span> Aplicativos</div>
+      <div class="card-title">Construir apps completos</div>
+      <p>Aplicativos funcionais com lógica interna e IA.</p>
+    </div>
+
+    <div class="card">
+      <div class="badge"><span class="badge-dot"></span> Gratuito</div>
+      <div class="card-title">Plataformas 100% gratuitas</div>
+      <p>Sem mensalidade. Sem pegadinha. Sem código.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:16px;">
+    Você pode criar para você ou transformar em renda, vendendo seus projetos digitalmente.
+  </p>
+</section>
+
+<!-- SEÇÃO 4 -->
+<section>
+  <div class="section-tag">Conteúdo do treinamento</div>
+  <h2>O que vou te entregar</h2>
+
+  <ul class="check-list">
+    <li><span class="check-icon">✔</span> Como usar IA para gerar páginas inteiras</li>
+    <li><span class="check-icon">✔</span> Como criar apps do zero com Google AI Studio</li>
+    <li><span class="check-icon">✔</span> Como conectar dados e publicar</li>
+    <li><span class="check-icon">✔</span> Como montar sites profissionais sem saber design</li>
+    <li><span class="check-icon">✔</span> Como vender ferramentas digitais</li>
+    <li><span class="check-icon">✔</span> Como clonar e entregar para clientes</li>
+    <li><span class="check-icon">✔</span> Como transformar tudo em uma oferta irresistível</li>
+  </ul>
+
+  <p>A aula ficará gravada e você receberá um guia do passo a passo — do zero até o cadastro no Kiwify.</p>
+</section>
+
+<!-- SEÇÃO 5 -->
+<section>
+  <div class="section-tag">Diferencial</div>
+  <h2>Por que este treinamento é diferente</h2>
+
+  <p><strong>Não vou fingir que vou te ensinar para te empurrar outro curso mais caro.</strong></p>
+
+  <p><strong>Sou direta, prática e vou te mostrar o caminho completo, do zero ao avançado.</strong></p>
+
+  <ul class="check-list">
+    <li><span class="check-icon">✔</span> Ferramentas gratuitas que parecem pagas</li>
+    <li><span class="check-icon">✔</span> Apps com bancos de dados reais</li>
+    <li><span class="check-icon">✔</span> Projetos valorizados por clientes</li>
+    <li><span class="check-icon">✔</span> Transformar habilidades em dinheiro no mesmo dia</li>
+  </ul>
+</section>
+
+<!-- SEÇÃO 6 -->
+<section id="para-quem">
+  <div class="two-cols">
+    <div>
+      <div class="section-tag">Para quem é</div>
+      <h2>Serve para você se quiser transformar habilidade digital em renda real</h2>
+
+      <ul class="check-list">
+        <li><span class="check-icon">✔</span> Empreendedores</li>
+        <li><span class="check-icon">✔</span> Social media</li>
+        <li><span class="check-icon">✔</span> Designers</li>
+        <li><span class="check-icon">✔</span> Produtores digitais</li>
+        <li><span class="check-icon">✔</span> Freelancers</li>
+        <li><span class="check-icon">✔</span> Quem nunca mexeu com IA</li>
+        <li><span class="check-icon">✔</span> Quem quer criar seu próprio app</li>
+      </ul>
+    </div>
+
+    <div class="image-box">
+      <img src="instrutora-suafoto.png" alt="Instrutora">
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 7 -->
+<section>
+  <div class="section-tag">Detalhes</div>
+  <h2>Detalhes do evento</h2>
+
+  <p><strong>Data:</strong> 29 de Novembro (sábado)</p>
+  <p><strong>Horário:</strong> 14h em ponto</p>
+  <p><strong>Formato:</strong> Online, ao vivo</p>
+  <p><strong>Replay:</strong> Garantido para quem se inscrever</p>
+  <p><strong>Bônus:</strong> Guia completo do passo a passo</p>
+</section>
+
+<!-- SEÇÃO 8 -->
+<section id="investimento">
+  <div class="price-section">
+
+    <div class="price-block">
+      <div class="price-label">Investimento</div>
+      <div class="price-big">R$ 149,00</div>
+      <div class="price-small">Ou 12x de R$ 14,33</div>
+      <a href="https://pay.kiwify.com.br/jiuZlDG" class="btn-primary" target="_blank">QUERO APRENDER AGORA</a>
+    </div>
+
+    <div>
+      <div class="section-tag">Garantia</div>
+      <h2>Garantia incondicional de 7 dias</h2>
+      <p>Se após assistir você sentir que não aprendeu nada extremamente útil, eu devolvo seu dinheiro — sem questionar.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SEÇÃO FINAL -->
+<section>
+  <div class="two-cols">
+    <div>
+      <div class="section-tag">Chamada final</div>
+      <h2>Últimas vagas</h2>
+      <p>Este é o tipo de conhecimento que abre portas imediatamente.</p>
+      <p>Você pode criar seu primeiro site ou app ainda esta semana — e começar a vender no mesmo dia.</p>
+
+      <a href="https://pay.kiwify.com.br/jiuZlDG" class="btn-primary" target="_blank">
+        QUERO MINHA VAGA NO TREINAMENTO AO VIVO
+      </a>
+    </div>
+
+    <div class="image-box">
+      <img src="mockup-suafoto.png" alt="Mockup do treinamento">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2025 Almeida Soluções Estratégicas Digitais LTDA — Todos os direitos reservados.
+</footer>
+
+</div>
+
+<script>
+// ============================================
+// MATRIX EFFECT - Chuva de código verde
+// ============================================
+const canvas = document.getElementById('matrix-canvas');
+const ctx = canvas.getContext('2d');
+
+// Configuração do canvas
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Caracteres para o efeito Matrix (mistura de caracteres japoneses, números e símbolos)
+const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:,.<>?アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+const chars = matrixChars.split('');
+
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+
+// Array para armazenar a posição Y de cada coluna
+const drops = [];
+for (let i = 0; i < columns; i++) {
+  drops[i] = Math.random() * -100;
+}
+
+// Função de animação
+function drawMatrix() {
+  // Fundo semi-transparente para criar efeito de trilha
+  ctx.fillStyle = 'rgba(2, 6, 23, 0.05)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Estilo do texto
+  ctx.fillStyle = '#0f9'; // Verde Matrix
+  ctx.font = fontSize + 'px monospace';
+
+  // Desenhar os caracteres
+  for (let i = 0; i < drops.length; i++) {
+    // Caractere aleatório
+    const text = chars[Math.floor(Math.random() * chars.length)];
+
+    // Desenhar o caractere
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    // Resetar a gota quando chega ao fim da tela
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+
+    // Mover a gota para baixo
+    drops[i]++;
+  }
+}
+
+// Executar a animação
+setInterval(drawMatrix, 35);
+
+// Redimensionar canvas quando a janela muda de tamanho
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Recalcular o número de colunas
+  const newColumns = canvas.width / fontSize;
+  drops.length = 0;
+  for (let i = 0; i < newColumns; i++) {
+    drops[i] = Math.random() * -100;
+  }
+});
+</script>
+
+</body>
+</html>
