@@ -232,19 +232,27 @@
 
     .price-box {
       margin: 16px 0;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(14, 165, 233, 0.08));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
     }
 
     .price-main {
       font-size: 28px;
-      font-weight: 700;
+      font-weight: 900;
       color: var(--accent);
       margin-bottom: 4px;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
     }
 
     .price-installments {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
+      font-size: 13px;
+      color: #e5e7eb;
+      font-weight: 400;
+      margin-bottom: 0;
     }
 
     .hero-secondary {
@@ -483,34 +491,39 @@
     }
 
     .price-block {
-      background: rgba(5, 11, 31, 0.5);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(14, 165, 233, 0.08));
       padding: 20px;
       border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      border: 1px solid rgba(56, 189, 248, 0.4);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
     }
 
     .price-label {
-      font-size: 13px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
+      letter-spacing: 0.15em;
+      color: var(--accent);
       margin-bottom: 8px;
+      font-weight: 600;
     }
 
     .price-big {
       font-size: 36px;
       font-weight: 900;
       color: var(--accent);
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
     }
 
     .price-small {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
+      font-size: 13px;
+      color: #e5e7eb;
+      margin-bottom: 20px;
+      font-weight: 400;
     }
 
     .bonus-highlight {
@@ -639,7 +652,8 @@
     </ul>
 
     <div class="price-box">
-      <div class="price-main">12x de R$ 15,50 ou R$ 149,00 no Pix</div>
+      <div class="price-main">12x de R$ 15,50</div>
+      <div class="price-installments">ou R$ 149,00 no Pix</div>
     </div>
 
     <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">
@@ -795,8 +809,8 @@
 
     <div class="price-block">
       <div class="price-label">Investimento</div>
-      <div class="price-big">R$ 149,00</div>
-      <div class="price-small">Ou 12x de R$ 15,50</div>
+      <div class="price-big">12x de R$ 15,50</div>
+      <div class="price-small">ou R$ 149,00 no Pix</div>
       <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">QUERO APRENDER AGORA</a>
     </div>
 
