@@ -104,7 +104,7 @@
         radial-gradient(circle at top, rgba(56, 189, 248, 0.15), transparent 60%),
         var(--bg-alt);
       box-shadow: var(--shadow-soft);
-      text-align: center;
+      text-align: left;
     }
 
     .countdown-title {
@@ -117,7 +117,7 @@
 
     .countdown-timer {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 6px;
       flex-wrap: nowrap;
     }
@@ -125,7 +125,7 @@
     .countdown-item {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       min-width: 45px;
       flex: 0 0 auto;
     }
@@ -201,8 +201,8 @@
     .hero-main {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
     }
 
     .hero-main h1 {
@@ -297,7 +297,7 @@
       width: 100%;
       max-width: 400px;
       text-align: center;
-      margin: 0 auto;
+      margin: 0;
     }
 
     .btn-primary:hover {
@@ -311,6 +311,7 @@
       border: 1px solid rgba(148,163,184,0.25);
       padding: 22px 18px;
       background: radial-gradient(circle at top left, rgba(15,23,42,0.7), rgba(2, 6, 23, 0.6) 70%);
+      text-align: left;
     }
 
     .section-tag {
@@ -431,8 +432,8 @@
       background: radial-gradient(circle at top, rgba(15, 23, 42, 0.6), rgba(2, 6, 23, 0.5) 90%);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
     }
 
     .card-title {
@@ -478,7 +479,7 @@
       border: 1px solid rgba(148, 163, 184, 0.3);
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .price-label {
@@ -541,11 +542,11 @@
     @media (max-width: 768px) {
       .about-section {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
       }
       .about-photo {
         max-width: 200px;
-        margin: 0 auto;
+        margin: 0;
       }
     }
 
@@ -555,7 +556,7 @@
       border-top: 1px solid rgba(30,64,175,0.8);
       font-size: 11px;
       color: var(--muted);
-      text-align: center;
+      text-align: left;
     }
   </style>
 </head>
