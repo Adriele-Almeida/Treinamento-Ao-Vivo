@@ -97,8 +97,8 @@
     /* COUNTDOWN BOX */
     .countdown-box {
       margin-bottom: 24px;
-      padding: 20px;
-      border-radius: 18px;
+      padding: 16px 12px;
+      border-radius: 14px;
       border: 1px solid var(--border-subtle);
       background:
         radial-gradient(circle at top, rgba(56, 189, 248, 0.15), transparent 60%),
@@ -108,17 +108,17 @@
     }
 
     .countdown-title {
-      font-size: 14px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--muted);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .countdown-timer {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
@@ -126,11 +126,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 70px;
+      min-width: 55px;
     }
 
     .countdown-number {
-      font-size: 36px;
+      font-size: 24px;
       font-weight: 900;
       color: var(--accent);
       line-height: 1;
@@ -138,11 +138,11 @@
     }
 
     .countdown-label {
-      font-size: 11px;
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--muted);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     nav {
@@ -195,6 +195,13 @@
         radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 55%),
         radial-gradient(circle at bottom right, rgba(15, 23, 42, 1), var(--bg) 55%);
       box-shadow: var(--shadow-soft);
+    }
+
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .hero-main h1 {
@@ -289,6 +296,7 @@
       width: 100%;
       max-width: 400px;
       text-align: center;
+      margin: 0 auto;
     }
 
     .btn-primary:hover {
@@ -335,15 +343,22 @@
         grid-template-columns: 1fr;
       }
       .hero-main h1 {
-        font-size: 28px;
+        font-size: 26px;
       }
       .two-cols {
         grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
       }
       /* Mobile: imagem primeiro, depois texto */
       .two-cols-mobile-reverse {
         display: flex;
         flex-direction: column-reverse;
+      }
+      /* Imagem sempre primeiro no mobile */
+      .image-box {
+        order: -1;
+        margin-bottom: 16px;
       }
       .grid-3 {
         grid-template-columns: 1fr !important;
@@ -356,7 +371,10 @@
         max-width: 100%;
       }
       .countdown-number {
-        font-size: 28px;
+        font-size: 20px;
+      }
+      .countdown-item {
+        min-width: 50px;
       }
     }
 
@@ -375,10 +393,10 @@
 
     .check-icon {
       color: var(--accent);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       flex-shrink: 0;
-      text-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+      text-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
       margin-top: 2px;
     }
 
