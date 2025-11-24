@@ -239,8 +239,14 @@
       box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
     }
 
+    .price-prefix {
+      font-size: 14px;
+      font-weight: 400;
+      color: #9ca3af;
+    }
+
     .price-main {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 900;
       color: var(--accent);
       margin-bottom: 4px;
@@ -511,12 +517,18 @@
     }
 
     .price-big {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 900;
       color: var(--accent);
       margin-bottom: 4px;
       line-height: 1;
       text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    }
+
+    .price-big .price-prefix {
+      font-size: 16px;
+      font-weight: 400;
+      color: #9ca3af;
     }
 
     .price-small {
@@ -652,7 +664,7 @@
     </ul>
 
     <div class="price-box">
-      <div class="price-main">12x de R$ 15,50</div>
+      <div class="price-main"><span class="price-prefix">12x de</span> R$ 15,50</div>
       <div class="price-installments">ou R$ 149,00 no Pix</div>
     </div>
 
@@ -809,7 +821,7 @@
 
     <div class="price-block">
       <div class="price-label">Investimento</div>
-      <div class="price-big">12x de R$ 15,50</div>
+      <div class="price-big"><span class="price-prefix">12x de</span> R$ 15,50</div>
       <div class="price-small">ou R$ 149,00 no Pix</div>
       <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">QUERO APRENDER AGORA</a>
     </div>
