@@ -7,8 +7,8 @@
   <meta name="description" content="Treinamento ao vivo: Como criar sites profissionais e aplicativos gratuitos usando Inteligência Artificial, sem saber programar." />
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Treinamento: Criação de Sites e Apps com IA" />
-  <meta property="og:description" content="Participe do treinamento ao vivo e aprenda a criar sites e apps com IA, sem precisar programar." />
+  <meta property="og:title" content="Treinamento ao Vivo" />
+  <meta property="og:description" content="Como criar sites e aplicativos usando IA — em plataformas gratuitas." />
   <meta property="og:image" content="hero-principal.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pay.kiwify.com.br/JamocOx" />
@@ -222,12 +222,26 @@
     }
 
     .hero-list {
-      padding-left: 18px;
+      padding-left: 0;
       margin-bottom: 20px;
+      list-style: none;
     }
 
     .hero-list li {
       margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .hero-list li:before {
+      content: "✔";
+      color: #38bdf8;
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+      text-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
+      margin-top: 2px;
     }
 
     .price-box {
@@ -428,7 +442,7 @@
       font-size: 18px;
       font-weight: 700;
       flex-shrink: 0;
-      text-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
+      text-shadow: 0 0 20px rgba(56, 189, 248, 1);
       margin-top: 2px;
     }
 
